@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="myprojectjpa">
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	
+
+        <!-- Entity classes -->
+        
+        <class>com.cg.myprojectjpa.dto.Restaurant</class>
+ 
+        <class>com.cg.myprojectjpa.dto.Item</class>
+ 
+        <class>com.cg..myprojectjpa.dto.Menu</class>
+        
+        <properties>
+            <!-- The J D B C  d r i v e r   of y o u r  d a t a b a s e -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <!-- T h e  J D B C U R L   t o  t h e  d a t a b a s e  in s t a n c e  -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/onlinefood_jpa" />
+            <!-- T h e   d a t a b a s e   u s e r n a m e  -->
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <!-- The database password -->
+            <property name="javax.persistence.jdbc.password" value="Capgemini123" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+           <property name = "hibernate.show_sql" value = "true" />
+        </properties>
+    </persistence-unit>
+</persistence>
+
+
